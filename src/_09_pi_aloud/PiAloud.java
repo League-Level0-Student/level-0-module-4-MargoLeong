@@ -1,37 +1,46 @@
 package _09_pi_aloud;
 //    Copyright (c) The League of Amazing Programmers 2013-2017
-//    Level 0
 
+//    Level 0
 
 import java.io.IOException;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class PiAloud {
+	public static void main(String[] args) { // 1. Make a main method and make sure your program can run
 
-	// 1. Make a main method and make sure your program can run
+		// 2. Make a String variable to hold the value of Pi. You could use for the
+		// value.
+		JOptionPane.showMessageDialog(null, " 3.1415926535897");
+		String pi = JOptionPane.showInputDialog(null,
+				"did you remember any of those numbers? yes ok not put them in the box!");
+		// 3. Print out some digits of Pi. The first value is "pi.charAt(0)", the second
+		// is "pi.charAt(1)"
+		for (int i = 0; i < pi.length(); i++) {
+			System.out.println(pi.charAt(i));
+		}
+		// 4. Print ALL the digits of of Pi (hint: use a loop)
+		JOptionPane.showMessageDialog(null,"Here are the answers...");
+		// 5. Use the speak() method to speak all the digits of Pi.
+speak("3.1415926535897");
+		// [ADVANCED]
+		// *6. Get a character from the user using the getInputFromUser() method
+		// *7. Compare the users' char to the next digit of Pi
+		// *8. If they are correct, print out "correct". If they are not, print
+		// "incorrect" to System.err.println
+	}
 
-	// 2. Make a String variable to hold the value of Pi. You could use http://www.piday.org/million/ for the value.
-
-	// 3. Print out some digits of Pi. The first value is "pi.charAt(0)", the second is "pi.charAt(1)"
-
-	// 4. Print ALL the digits of of Pi (hint: use a loop)
-
-	// 5. Use the speak() method to speak all the digits of Pi.
-
-	// [ADVANCED]
-	// *6. Get a character from the user using the getInputFromUser() method
-	// *7. Compare the users' char to the next digit of Pi
-	// *8. If they are correct, print out "correct". If they are not, print "incorrect" to System.err.println
-
-	static void speak(char characterToSpeak) {
+	static void speak(String string) {
 		try {
-			Runtime.getRuntime().exec("say " + characterToSpeak).waitFor();
+			Runtime.getRuntime().exec("say " + string).waitFor();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	private static void pause(int seconds) {
+	private void pause(int seconds) {
 		try {
 			Thread.sleep(1000 * seconds);
 		} catch (InterruptedException e) {
@@ -39,12 +48,9 @@ public class PiAloud {
 		}
 	}
 
-
-	static char getInputFromUser() {
+	char getInputFromUser() {
 		Scanner scanner = new Scanner(System.in);
 		return scanner.next().toCharArray()[0];
 	}
 
 }
-
-
