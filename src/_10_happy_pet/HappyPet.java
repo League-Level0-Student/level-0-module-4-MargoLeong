@@ -1,30 +1,39 @@
 package _10_happy_pet;
+
 import javax.swing.JOptionPane;
 
 public class HappyPet {
-	
-	// 2. Add the following variable to the next line: static int happinessLevel = 0;
+
+	// 2. Add the following variable to the next line: static int happinessLevel =
+	// 0;
 	// this will be used to store the happiness of your pet
-	
+
 	public static void main(String[] args) {
 		// 1. Ask the user what kind of pet they want to buy, and store their answer in a variable
-String pet=JOptionPane.showInputDialog(null,"what pet do you want?");
+String petty=JOptionPane.showInputDialog(null,"what pet do you want?");
+		String pet=JOptionPane.showInputDialog(null,"name your "+petty);
 		// 7. REPEAT steps 3 - 6 enough times to make your pet happy!
 		
 			// 3. Use showOptionDialog to ask the user what they want to do to make their pet happy
 			//    (eg: cuddle, food, water, take a walk, groom, clean up poop).
 			//    Make sure to customize the title and question too.
-			int care = JOptionPane.showOptionDialog(null, "Take Care Of Your "+ pet , pet, 0, JOptionPane.INFORMATION_MESSAGE, null,
-					new String[] { "make "+pet+"exersize", "feed", "make it take a nap" }, null);
+			int care = JOptionPane.showOptionDialog(null, "Take Care Of "+ pet , pet, 0, JOptionPane.INFORMATION_MESSAGE, null,
+					new String[] { "let "+pet+" exersize", "feed "+pet, "let "+pet+" take a nap" }, null);
 
 			// 5. Use user input to call the appropriate method created in step 4.
-JOptionPane.showMessageDialog(null, "you are going to make"+care);
-			// 6. If you determine the happiness level is large enough, tell the
-			//    user that he loves his pet and use break; to exit for loop.
+			
 
-	}
+JOptionPane.showMessageDialog(null,pet+" is now happy");
+JOptionPane.showMessageDialog(null,"your "+petty+", "+pet+"'s happiness bar is at 5/10" );
+	
 
-	// 4. Create methods to handle each of your user selections.
-	//    Each method should create a pop-up with the pet's response (eg. cat might purr when pet), 
-	//    and INCREMENT the pet's happiness Level.
+//JOptionPane.showOptionDialog(null, "take care of your pet day 2");
 }
+}
+// 6. If you determine the happiness level is large enough, tell the
+// user that he loves his pet and use break; to exit for loop.
+
+// 4. Create methods to handle each of your user selections.
+// Each method should create a pop-up with the pet's response (eg. cat might
+// purr when pet),
+// and INCREMENT the pet's happiness Level.
