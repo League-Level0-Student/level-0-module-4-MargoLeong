@@ -27,7 +27,16 @@ JOptionPane.showMessageDialog(null,pet+" is now happy");
 JOptionPane.showMessageDialog(null,"your "+petty+", "+pet+"'s happiness bar is at 5/10" );
 	
 
-//JOptionPane.showOptionDialog(null, "take care of your pet day 2");
+JOptionPane.showMessageDialog(null, "take care of your pet day 2");
+int care1 = JOptionPane.showOptionDialog(null, "Take Care Of "+ pet , pet, 0, JOptionPane.INFORMATION_MESSAGE, null,
+		new String[] { "let "+pet+" go to bathroom", "give "+pet +"  water ","let "+pet+" play with the weirdo dog over there" }, null);
+
+// 5. Use user input to call the appropriate method created in step 4.
+
+
+JOptionPane.showMessageDialog(null,pet+" is now happy");
+JOptionPane.showMessageDialog(null,"your "+petty+", "+pet+"'s happiness bar is at 10/10" );
+
 }
 }
 // 6. If you determine the happiness level is large enough, tell the
