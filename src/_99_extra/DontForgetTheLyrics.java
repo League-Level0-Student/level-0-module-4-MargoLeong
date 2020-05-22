@@ -21,10 +21,17 @@ public class DontForgetTheLyrics {
 	
 	public static void main(String[] args) {
 		// 4. Make a pop-up to explain the game.
-
+JOptionPane.showMessageDialog(null, "click this- it is mary had a little lamb        https://www.youtube.com/watch?v=aTrtKikAW6E");
 		// 5. Use the playSound method to play your song.
-
+JOptionPane.showMessageDialog(null, "hope you got most of the lyrics");
 		// 6. Make a pop-up for the player to type their answer.
+String mary= JOptionPane.showInputDialog(null, "what is the girls name?");
+if(mary.equalsIgnoreCase("mary")) {
+	JOptionPane.showMessageDialog(null, "correct *ding* one point!  ");
+}else {
+	JOptionPane.showMessageDialog(null, "no poointttttt...... it is maryyyyyy");
+}
+}
 
 		// 7. If they answered correctly, tell them that they were right.
 
@@ -33,7 +40,7 @@ public class DontForgetTheLyrics {
 		// 9. Record another sound and repeat steps 5-8.
 
 		// 10. [optional] Add a points variable that will calculate their final score.
-	}
+	
 
 	public static void playSound(String fileName) {
 		AudioClip audioClip = JApplet.newAudioClip(new DontForgetTheLyrics().getClass().getResource(fileName));
